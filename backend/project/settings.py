@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # Third party Apps
     'django_extensions',
+    'rest_framework',
 
     # My Apps
     'myapps.students.apps.StudentsConfig',

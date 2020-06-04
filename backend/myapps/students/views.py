@@ -1,14 +1,8 @@
-from django.shortcuts import render
-from django.http import JsonResponse
+from rest_framework import viewsets
+from .models import Student
+from .serializers import StudentSerializer
 
 
-# Create your views here.
-def home(request):
-    students = []
-    return JsonResponse(students, safe=False)
-
-
-def detail(request, student_id=None):
-    student = dict()
-    student['student_id'] = student_id
-    return JsonResponse(student)
+class StudentsViewSet(viewsets.ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer

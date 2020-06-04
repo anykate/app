@@ -8,7 +8,7 @@ class Student(models.Model):
     rating = models.IntegerField()
 
     class Meta:
-        ordering = ['name']
+        ordering = ['-name', ]
         verbose_name = "student"
         verbose_name_plural = "students"
 
